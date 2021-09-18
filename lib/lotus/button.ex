@@ -49,11 +49,6 @@ defmodule Lotus.Button do
 
   slot default
 
-  @doc """
-  Additional attributes to add onto the generated element
-  """
-  prop opts, :keyword, default: []
-
   def render(assigns) do
     ~F"""
     <button :on-click={@click} type="button" class={button_class(assigns)} {...@opts}>
