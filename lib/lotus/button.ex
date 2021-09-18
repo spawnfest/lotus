@@ -77,6 +77,6 @@ defmodule Lotus.Button do
   end
 
   defp button_class(assigns) do
-    button_kind_class(assigns) ++ get_classes(assigns)
+    button_kind_class(assigns) ++ base_classes(assigns)
   end
 end
