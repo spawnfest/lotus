@@ -24,3 +24,12 @@ lotus-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+# Ignore auto-generated hook files
+/assets/js/_hooks/
+
+# If NPM crashes, it generates a log, let's ignore it too.
+npm-debug.log
+
+# The directory NPM downloads your dependencies sources to.
+/assets/node_modules/

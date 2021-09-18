@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "topbar": "^1.0.1",
+    "uikit": "^3.7.3",
+    "uikit-icons": "^0.5.0"
+  }
+}

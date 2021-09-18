@@ -30,6 +30,7 @@ defmodule Lotus.MixProject do
 
   defp aliases do
     [
+      dev: "run --no-halt dev.exs",
       format: ["format", "surface.format"]
     ]
   end
