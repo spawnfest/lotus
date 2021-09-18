@@ -11,6 +11,11 @@ defmodule Lotus.Component do
       use Lotus.Props.Utility
       use Lotus.Props.Width
 
+      @doc """
+      Additional attributes to add onto the generated element
+      """
+      prop opts, :keyword, default: []
+
       defp base_classes(assigns) do
         padding_class(assigns) ++
           width_class(assigns) ++
