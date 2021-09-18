@@ -3,14 +3,14 @@ defmodule Lotus.Gen do
 
   @identifier "container"
   @current_module %{
-    hook: true,
     file: @identifier,
     module: Phoenix.Naming.camelize(@identifier),
     class: ~s/uk-#{@identifier |> String.replace("_", "-")}/,
-    props: [
-      %{name: :size, type: :string, values: ~w/xsmall small large xlarge expand/}
-    ],
-    examples: [
+    props: ["size"],
+    hook: false,
+    playground: false,
+    examples: 1,
+    cases: [
       {
         """
         <Container size="small">
@@ -23,9 +23,10 @@ defmodule Lotus.Gen do
         </div>
         """
       }
-    ],
-    playground: true,
+    ]
   }
+  def get_config, do: @current_module
+
   def run do
     Helpers.list_artifacts(@current_module)
   end
