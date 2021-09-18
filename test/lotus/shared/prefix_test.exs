@@ -1,4 +1,4 @@
 defmodule Lotus.Shared.PrefixTest do
-	use ExUnit.Case
+  use ExUnit.Case
   doctest Lotus.Shared.Prefix
 end

@@ -162,7 +162,9 @@ defmodule Lotus.Shared.Width do
     assigns
     |> Map.take(@responsive_widths)
     |> Enum.flat_map(fn
-      {_, nil} -> []
+      {_, nil} ->
+        []
+
       {target, width} ->
         [
           (child && responsive_child_width_class(width, target)) ||
