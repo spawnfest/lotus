@@ -8,11 +8,6 @@ defmodule Lotus.Button do
   @sizes ~w/small large/
 
   @doc """
-  Additional classes
-  """
-  prop class, :css_class, default: []
-
-  @doc """
   Label of the button, can be used in lieu of slot
   """
   prop label, :string
@@ -82,7 +77,6 @@ defmodule Lotus.Button do
   end
 
   defp button_class(assigns) do
-    button_kind_class(assigns) ++
-      get_classes(assigns) ++ assigns.class
+    button_kind_class(assigns) ++ get_classes(assigns)
   end
 end
