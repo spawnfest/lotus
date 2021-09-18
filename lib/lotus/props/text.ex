@@ -39,7 +39,8 @@ defmodule Lotus.Props.Text do
       @doc """
       Text Color
       """
-      prop text_color, :string, values: ~w/muted emphasis primary secondary success warning danger/
+      prop text_color, :string,
+        values: ~w/muted emphasis primary secondary success warning danger/
 
       @doc """
       Text horizontal alignment

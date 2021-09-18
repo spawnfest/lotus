@@ -56,12 +56,7 @@ defmodule Lotus.Button do
 
   def render(assigns) do
     ~F"""
-    <button
-      :on-click={@click}
-      type="button"
-      class={button_class(assigns)}
-      {...@opts}
-    >
+    <button :on-click={@click} type="button" class={button_class(assigns)} {...@opts}>
       <#slot>{@label}</#slot>
     </button>
     """
