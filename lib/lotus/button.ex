@@ -4,8 +4,6 @@ defmodule Lotus.Button do
   """
   use Lotus.Component
 
-  alias Lotus.Shared.Width
-
   @kinds ~w/default primary secondary danger text link/
   @sizes ~w/small large/
 
@@ -28,11 +26,6 @@ defmodule Lotus.Button do
   Size of this button
   """
   prop size, :string, values: @sizes
-
-  @doc """
-  Width of this button
-  """
-  prop width, :string, values: Width.width_specs()
 
   @doc """
   Width at small-screen
@@ -71,15 +64,25 @@ defmodule Lotus.Button do
     <button
       :on-click={@click}
       type="button"
-      class={[
-        "uk-button": @class == [],
-        "uk-button-#{@kind}": @kind,
-        "uk-button-#{@size}": @size
-      ] ++ Width.assigns_to_width_classes(assigns) ++ @class}
+      class={button_class(assigns)}
       {...@opts}
     >
       <#slot>{@label}</#slot>
     </button>
     """
+  end
+
+  defp button_kind_class(assigns) do
+    Surface.css_class(
+      "uk-button": assigns.class == [],
+      "uk-button-#{assigns.kind}": assigns.kind,
+      "uk-button-#{assigns.size}": assigns.size
+    )
+    |> List.wrap()
+  end
+
+  defp button_class(assigns) do
+    button_kind_class(assigns) ++
+      get_classes(assigns) ++ assigns.class
   end
 end
