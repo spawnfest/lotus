@@ -8,11 +8,13 @@ defmodule Lotus.Component do
       use Lotus.Props.FallbackClass
       use Lotus.Props.Padding
       use Lotus.Props.Text
+      use Lotus.Props.Utility
       use Lotus.Props.Width
 
       defp base_classes(assigns) do
         padding_class(assigns) ++
-          width_class(assigns) ++ text_class(assigns) ++ fallback_class(assigns)
+          width_class(assigns) ++
+          text_class(assigns) ++ utility_class(assigns) ++ fallback_class(assigns)
       end
     end
   end
