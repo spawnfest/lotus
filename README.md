@@ -1,21 +1,6 @@
 # Lotus
 
-**TODO: Add description**
+Lotus is a [Surface UI](https://surface-ui.org/) wrapper for [UIKit](https://getuikit.com/). Make good looking UIs in LiveView without writing a single line of JS (for the most part).
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `lotus` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:lotus, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/lotus](https://hexdocs.pm/lotus).
+### Everything else coming soon!
 
