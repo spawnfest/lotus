@@ -11,10 +11,10 @@ defmodule Lotus.Props.ChildWidth do
       @doc """
       Child width
       """
-      prop width, :string, values: WidthHelper.width_specs()
+      prop child_width, :string, values: WidthHelper.width_specs()
 
       defp child_width_class(assigns) do
-        WidthHelper.assigns_to_chilld_width_classes(assigns)
+        WidthHelper.assigns_to_child_width_classes(assigns)
       end
     end
   end

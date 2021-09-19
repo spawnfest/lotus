@@ -7,9 +7,17 @@ defmodule Lotus.ContainerComponent do
       use Lotus.Component
       use Lotus.Props.Background
       use Lotus.Props.Flex
+      use Lotus.Props.Grid
+      use Lotus.Props.ChildWidth
+      use Lotus.Props.Height
 
       defp container_base_classes(assigns) do
-        base_classes(assigns) ++ background_class(assigns) ++ flex_class(assigns)
+        base_classes(assigns) ++
+          background_class(assigns) ++
+          flex_class(assigns) ++
+          height_class(assigns) ++
+          grid_class(assigns) ++
+          child_width_class(assigns)
       end
     end
   end

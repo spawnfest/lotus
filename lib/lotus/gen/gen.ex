@@ -35,12 +35,12 @@ defmodule Lotus.Gen do
   end
 
   # ------------------------------------------------------- PROPS
-  @identifier "margin"
+  @identifier "grid"
   @current_prop %{
     file: @identifier,
     module: Phoenix.Naming.camelize(@identifier),
     class: ~s/uk-#{@identifier |> String.replace("_", "-")}/,
-    props: ["margin_size", "margin_position"],
+    props: ["grid", "grid_size", "grid_column_size", "grid_row_size", "divider", "grid_match_height", ],
     responsive_props: []
   }
   def get_prop, do: @current_module
