@@ -16,7 +16,8 @@ defmodule Lotus.SimpleComponent do
       prop opts, :keyword, default: []
 
       defp simple_base_classes(assigns) do
-        padding_class(assigns) ++ fallback_class(assigns) ++ margin_class(assigns) ++ transition_class(assigns)
+        padding_class(assigns) ++
+          fallback_class(assigns) ++ margin_class(assigns) ++ transition_class(assigns)
       end
     end
   end

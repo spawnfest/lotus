@@ -7,6 +7,7 @@ defmodule Lotus.Tab do
   use Lotus.Component
 
   prop id, :string, required: true
+
   @doc """
   position of tab heading
   """

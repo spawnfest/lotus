@@ -12,6 +12,7 @@ defmodule Lotus.Accordion do
   collapsible
   """
   prop collapsible, :boolean
+
   @doc """
   multiple
   """
@@ -21,7 +22,14 @@ defmodule Lotus.Accordion do
 
   def render(assigns) do
     ~F"""
-    <ul {=@id} :hook="Accordion" data-collapsible={@collapsible} data-multiple={@multiple} class={base_classes(assigns)} {...@opts}>
+    <ul
+      {=@id}
+      :hook="Accordion"
+      data-collapsible={@collapsible}
+      data-multiple={@multiple}
+      class={base_classes(assigns)}
+      {...@opts}
+    >
       <#slot />
     </ul>
     """

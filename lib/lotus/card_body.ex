@@ -6,12 +6,11 @@ defmodule Lotus.CardBody do
   """
   use Lotus.Component
 
-
   slot default
 
   def render(assigns) do
     ~F"""
-    <div  class={card_body_class(assigns)} {...@opts}>
+    <div class={card_body_class(assigns)} {...@opts}>
       <#slot />
     </div>
     """
@@ -19,11 +18,7 @@ defmodule Lotus.CardBody do
 
   defp card_body_class(assigns) do
     [
-      Surface.css_class(
-        "uk-card-body": true,
-
-
-      ) | base_classes(assigns)
+      Surface.css_class("uk-card-body": true) | base_classes(assigns)
     ]
   end
 end
