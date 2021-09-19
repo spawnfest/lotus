@@ -29,7 +29,7 @@ defmodule Lotus.Props.Grid do
       @doc """
       Doc of divider
       """
-      prop divider, :boolean
+      prop grid_divider, :boolean
 
       @doc """
       Grid_match_height
@@ -42,7 +42,7 @@ defmodule Lotus.Props.Grid do
           "uk-grid-#{assigns.grid_size}": assigns.grid_size,
           "uk-grid-column-#{assigns.grid_column_size}": assigns.grid_column_size,
           "uk-grid-row-#{assigns.grid_row_size}": assigns.grid_row_size,
-          "uk-grid-divider": assigns.divider,
+          "uk-grid-divider": assigns.grid_divider,
           "uk-grid-match": assigns.grid_match_height == "all",
           "uk-grid-item-match": assigns.grid_match_height == "one"
         )
