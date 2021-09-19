@@ -1,13 +1,11 @@
 defmodule Lotus.Block do
   @moduledoc """
-  # TODO
-
-  Documentation: https://getuikit.com/docs/block
+  A block is a container for classes. It can be a Grid container, Flex container, or a panel.
   """
   use Lotus.ContainerComponent
 
   @doc """
-  inline
+  Is this block an inline?
   """
   prop inline, :boolean
 
