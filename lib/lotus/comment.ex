@@ -1,6 +1,6 @@
 defmodule Lotus.Comment do
   @moduledoc """
-  # TODO
+  Includes styles for comments, for example for a blog section on your site.
 
   Documentation: https://getuikit.com/docs/comment
   """

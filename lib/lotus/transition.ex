@@ -1,6 +1,6 @@
 defmodule Lotus.Transition do
   @moduledoc """
-  # TODO
+  Create smooth transitions between two states when hovering an element.
 
   Documentation: https://getuikit.com/docs/transition
   """

@@ -1,6 +1,6 @@
 defmodule Lotus.Article do
   @moduledoc """
-  # TODO
+  Create articles within your page.
 
   Documentation: https://getuikit.com/docs/article
   """

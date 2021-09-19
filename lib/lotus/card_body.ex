@@ -1,12 +1,12 @@
 defmodule Lotus.CardBody do
   @moduledoc """
-  # TODO 
-  
+  Main content of the card
+
   Documentation: https://getuikit.com/docs/card_body
   """
   use Lotus.Component
-  
-  
+
+
   slot default
 
   def render(assigns) do
@@ -21,8 +21,8 @@ defmodule Lotus.CardBody do
     [
       Surface.css_class(
         "uk-card-body": true,
-        
-        
+
+
       ) | base_classes(assigns)
     ]
   end

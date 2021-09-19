@@ -1,6 +1,6 @@
 defmodule Lotus.Heading do
   @moduledoc """
-  # TODO
+  Define different styles for headings.TODO
 
   Documentation: https://getuikit.com/docs/heading
   """

@@ -1,6 +1,6 @@
 defmodule Lotus.TabItem do
   @moduledoc """
-  # TODO
+  Item of a tab heading
 
   Documentation: https://getuikit.com/docs/tab_item
   """

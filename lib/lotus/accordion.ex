@@ -1,6 +1,6 @@
 defmodule Lotus.Accordion do
   @moduledoc """
-  # TODO
+  Create a list of items that can be shown individually by clicking an item's header.
 
   Documentation: https://getuikit.com/docs/accordion
   """
