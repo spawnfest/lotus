@@ -106,10 +106,14 @@ defmodule Lotus.Props.Flex do
           "uk-flex-#{assigns.flex_item_order_medium}@m": assigns.flex_item_order_medium,
           "uk-flex-#{assigns.flex_item_order_large}@l": assigns.flex_item_order_large,
           "uk-flex-#{assigns.flex_item_order_xlarge}@xl": assigns.flex_item_order_xlarge,
-          "uk-flex-#{assigns.flex_horizontal_alignment_small}@s": assigns.flex_horizontal_alignment_small,
-          "uk-flex-#{assigns.flex_horizontal_alignment_medium}@m": assigns.flex_horizontal_alignment_medium,
-          "uk-flex-#{assigns.flex_horizontal_alignment_large}@l": assigns.flex_horizontal_alignment_large,
-          "uk-flex-#{assigns.flex_horizontal_alignment_xlarge}@xl": assigns.flex_horizontal_alignment_xlarge
+          "uk-flex-#{assigns.flex_horizontal_alignment_small}@s":
+            assigns.flex_horizontal_alignment_small,
+          "uk-flex-#{assigns.flex_horizontal_alignment_medium}@m":
+            assigns.flex_horizontal_alignment_medium,
+          "uk-flex-#{assigns.flex_horizontal_alignment_large}@l":
+            assigns.flex_horizontal_alignment_large,
+          "uk-flex-#{assigns.flex_horizontal_alignment_xlarge}@xl":
+            assigns.flex_horizontal_alignment_xlarge
         )
         |> List.wrap()
       end

@@ -23,7 +23,8 @@ defmodule Lotus.Dotnav do
 
   defp dotnav_class(assigns) do
     [
-      Surface.css_class("uk-dotnav": true, "uk-dotnav-vertical": assigns.vertical) | base_classes(assigns)
+      Surface.css_class("uk-dotnav": true, "uk-dotnav-vertical": assigns.vertical)
+      | base_classes(assigns)
     ]
   end
 end

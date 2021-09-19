@@ -49,7 +49,7 @@ defmodule Lotus.Button do
     events = event_attrs(assigns)
 
     ~F"""
-    <button type="button" class={button_class(assigns)} :attrs={@opts ++ events}>
+    <button type="button" class={button_class(assigns)} {...@opts ++ events}>
       <#slot>{@label}</#slot>
     </button>
     """

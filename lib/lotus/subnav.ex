@@ -10,7 +10,7 @@ defmodule Lotus.Subnav do
 
   def render(assigns) do
     ~F"""
-    <div  class={subnav_class(assigns)} {...@opts}>
+    <div class={subnav_class(assigns)} {...@opts}>
       <#slot />
     </div>
     """

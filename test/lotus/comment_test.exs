@@ -9,7 +9,7 @@ defmodule Lotus.CommentTest do
     html =
       render_surface do
         ~F"""
-        <Comment></Comment>
+        <Comment />
         """
       end
 

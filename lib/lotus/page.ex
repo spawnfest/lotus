@@ -30,8 +30,9 @@ defmodule Lotus.Page do
     [
       Surface.css_class(
         "uk-active": assigns.page_active,
-        "uk-disabled": assigns.page_disabled,
-      ) | simple_base_classes(assigns)
+        "uk-disabled": assigns.page_disabled
+      )
+      | simple_base_classes(assigns)
     ]
   end
 end

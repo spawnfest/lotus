@@ -24,7 +24,7 @@ defmodule Lotus.CommentAvatar do
 
   def render(assigns) do
     ~F"""
-    <img class={comment_avatar_class(assigns)} src={@src} alt={@alt} {...@opts} />
+    <img class={comment_avatar_class(assigns)} src={@src} alt={@alt} {...@opts}>
     """
   end
 

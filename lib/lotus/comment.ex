@@ -6,7 +6,6 @@ defmodule Lotus.Comment do
   """
   use Lotus.ContainerComponent
 
-
   @doc """
   primary (Small)
   """
@@ -28,8 +27,9 @@ defmodule Lotus.Comment do
     [
       Surface.css_class(
         "uk-comment": true,
-        "uk-comment-primary": assigns.primary,
-      ) | container_base_classes(assigns)
+        "uk-comment-primary": assigns.primary
+      )
+      | container_base_classes(assigns)
     ]
   end
 end

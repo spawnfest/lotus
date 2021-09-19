@@ -12,9 +12,7 @@ defmodule Lotus.Props.Height do
       prop height, :string, values: ~w/1-1 small max-small medium max-medium large max-large/
 
       defp height_class(assigns) do
-        Surface.css_class(
-          "uk-height-#{assigns.height}": assigns.height
-        )
+        Surface.css_class("uk-height-#{assigns.height}": assigns.height)
         |> List.wrap()
       end
     end
