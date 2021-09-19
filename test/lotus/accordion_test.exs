@@ -9,14 +9,14 @@ defmodule Lotus.AccordionTest do
     html =
       render_surface do
         ~F"""
-        <Accordion>Hello</Accordion>
+        <Accordion id="10">Hello</Accordion>
         """
       end
 
     assert html =~ """
-           <div class="uk-accordion">
+           <ul phx-hook="Lotus.Accordion#Accordion" id="10">
              Hello
-           </div>
+           </ul>
            """
   end
 end

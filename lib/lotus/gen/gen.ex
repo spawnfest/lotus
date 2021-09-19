@@ -5,12 +5,12 @@ defmodule Lotus.Gen do
   alias Lotus.Gen.Helpers
 
   # ------------------------------------------------------- MODULES
-  @identifier "tab"
+  @identifier "tab_item"
   @current_module %{
     file: @identifier,
     module: Phoenix.Naming.camelize(@identifier),
     class: ~s/uk-#{@identifier |> String.replace("_", "-")}/,
-    props: ["position"],
+    props: ["active", "disabled"],
     responsive_props: [],
     hook: true,
     playground: false,
