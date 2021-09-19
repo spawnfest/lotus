@@ -5,12 +5,12 @@ defmodule Lotus.Gen do
   alias Lotus.Gen.Helpers
 
   # ------------------------------------------------------- MODULES
-  @identifier "block"
+  @identifier "heading"
   @current_module %{
     file: @identifier,
     module: Phoenix.Naming.camelize(@identifier),
     class: ~s/uk-#{@identifier |> String.replace("_", "-")}/,
-    props: ["inline"],
+    props: ["size", "divider", "bullet", "level", "line"],
     responsive_props: [],
     hook: false,
     playground: true,
