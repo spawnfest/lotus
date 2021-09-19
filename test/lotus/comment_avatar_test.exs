@@ -9,12 +9,12 @@ defmodule Lotus.CommentAvatarTest do
     html =
       render_surface do
         ~F"""
-        <CommentAvatar />
+        <CommentAvatar src="avatar/me.jpg" />
         """
       end
 
     assert html =~ """
-           <img class="uk-comment-avatar">
+           <img class="uk-comment-avatar" src="avatar/me.jpg">
            """
   end
 end
