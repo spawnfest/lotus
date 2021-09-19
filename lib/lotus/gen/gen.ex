@@ -2,15 +2,15 @@ defmodule Lotus.Gen do
   alias Lotus.Gen.Helpers
 
   # ------------------------------------------------------- MODULES
-  @identifier "container"
+  @identifier "label"
   @current_module %{
     file: @identifier,
     module: Phoenix.Naming.camelize(@identifier),
     class: ~s/uk-#{@identifier |> String.replace("_", "-")}/,
-    props: ["size"],
+    props: ["style"],
     responsive_props: [],
     hook: false,
-    playground: true,
+    playground: false,
     examples: 1
   }
   def get_module, do: @current_module
