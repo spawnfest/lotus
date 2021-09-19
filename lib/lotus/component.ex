@@ -5,13 +5,15 @@ defmodule Lotus.Component do
   defmacro __using__(_) do
     quote do
       use Lotus.SimpleComponent
+      use Lotus.Props.Background
       use Lotus.Props.Text
       use Lotus.Props.Utility
       use Lotus.Props.Width
 
       defp base_classes(assigns) do
         width_class(assigns) ++
-          text_class(assigns) ++ utility_class(assigns) ++ simple_base_classes(assigns)
+          text_class(assigns) ++
+          utility_class(assigns) ++ simple_base_classes(assigns) ++ background_class(assigns)
       end
     end
   end

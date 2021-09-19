@@ -7,7 +7,7 @@ defmodule Lotus.Props.Background do
       @doc """
       Background_size
       """
-      prop background, :string, default: "default", values: ~w/default muted primary secondary/
+      prop background, :string, values: ~w/default muted primary secondary/
 
       @doc """
       Background_size
@@ -82,7 +82,7 @@ defmodule Lotus.Props.Background do
 
       defp background_class(assigns) do
         Surface.css_class(
-          "uk-background-#{assignes.background}": true,
+          "uk-background-#{assigns.background}": assigns.background,
           "uk-background-#{assigns.background_size}": assigns.background_size,
           "uk-background-#{assigns.background_position}": assigns.background_position,
           "uk-background-norepeat": assigns.background_no_repeat,
