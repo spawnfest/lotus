@@ -46,38 +46,50 @@ defmodule Lotus.Heading do
 
   defp h1(assigns) do
     ~F"""
-    <h1 class={heading_class(assigns)} {...@opts}><#slot /></h1>
+    <h1 class={heading_class(assigns)} {...@opts}>{with_span(assigns)}</h1>
     """
   end
 
   defp h2(assigns) do
     ~F"""
-    <h2 class={heading_class(assigns)} {...@opts}><#slot /></h2>
+    <h2 class={heading_class(assigns)} {...@opts}>{with_span(assigns)}</h2>
     """
   end
 
   defp h3(assigns) do
     ~F"""
-    <h3 class={heading_class(assigns)} {...@opts}><#slot /></h3>
+    <h3 class={heading_class(assigns)} {...@opts}>{with_span(assigns)}</h3>
     """
   end
 
   defp h4(assigns) do
     ~F"""
-    <h4 class={heading_class(assigns)} {...@opts}><#slot /></h4>
+    <h4 class={heading_class(assigns)} {...@opts}>{with_span(assigns)}</h4>
     """
   end
 
   defp h5(assigns) do
     ~F"""
-    <h5 class={heading_class(assigns)} {...@opts}><#slot /></h5>
+    <h5 class={heading_class(assigns)} {...@opts}>{with_span(assigns)}</h5>
     """
   end
 
   defp h6(assigns) do
     ~F"""
-    <h6 class={heading_class(assigns)} {...@opts}><#slot /></h6>
+    <h6 class={heading_class(assigns)} {...@opts}>{with_span(assigns)}</h6>
     """
+  end
+
+  defp with_span(assigns) do
+    if assigns.line do
+      ~F"""
+      <span><#slot /></span>
+      """
+    else
+      ~F"""
+      <#slot />
+      """
+    end
   end
 
   defp heading_class(assigns) do
