@@ -35,13 +35,19 @@ defmodule Lotus.Gen do
   end
 
   # ------------------------------------------------------- PROPS
-  @identifier "align"
+  @identifier "background"
   @current_prop %{
     file: @identifier,
     module: Phoenix.Naming.camelize(@identifier),
     class: ~s/uk-#{@identifier |> String.replace("_", "-")}/,
-    props: ["size"],
-    responsive_props: []
+    props: [
+      "background_size",
+      "background_position",
+      "background_no_repeat",
+      "background_fixed",
+      "background_blend"
+    ],
+    responsive_props: ["background_image"]
   }
   def get_prop, do: @current_module
 

@@ -7,7 +7,8 @@ defmodule Lotus.Props.<%= module %> do
       <%= for prop <- props do %>@doc """
       Doc of <%= prop %>
       """
-      prop <%= prop %>, :string, values: ~w//<% end %>
+      prop <%= prop %>, :string, values: ~w//
+      <% end %>
       <%= for prop <- responsive_props do %>
       @doc """
       Doc of <%= prop %> (Small)
