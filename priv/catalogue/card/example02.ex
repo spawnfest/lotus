@@ -2,7 +2,7 @@ defmodule Lotus.Catalogue.Card.Example02 do
   use Surface.Catalogue.Example,
     subject: Lotus.Card,
     catalogue: Lotus.Catalogue,
-    title: "Card",
+    title: "Card (Header and Footer)",
     height: "500px",
     direction: "horizontal",
     container: {:div, class: "uk-container"}
