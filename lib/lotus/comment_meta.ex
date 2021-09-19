@@ -2,7 +2,7 @@ defmodule Lotus.CommentMeta do
   @moduledoc """
   Comment meta data
   """
-  use Surface.Component, slot: "comment_meta"
+  use Surface.Component
   use Lotus.Props.Text
   use Lotus.Props.Utility
   use Lotus.Props.FallbackClass

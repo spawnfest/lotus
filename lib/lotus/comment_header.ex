@@ -7,26 +7,12 @@ defmodule Lotus.CommentHeader do
   use Lotus.Props.Utility
   use Lotus.Props.FallbackClass
 
-  @doc """
-  Title for this comment header
-  """
-  slot comment_title
-
-  @doc """
-  Meta of this comment header
-  """
-  slot comment_meta
-
-  @doc """
-  Avatar of this comment header
-  """
-  slot comment_avatar
+  slot default
 
   def render(assigns) do
     ~F"""
     <header class={comment_header_class(assigns)}>
-      <#slot name="comment_title" />
-      <#slot name="comment_meta" />
+      <#slot />
     </header>
     """
   end

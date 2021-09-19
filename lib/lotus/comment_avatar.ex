@@ -2,7 +2,7 @@ defmodule Lotus.CommentAvatar do
   @moduledoc """
   Avatar of a comment
   """
-  use Surface.Component, slot: "comment_avatar"
+  use Surface.Component
   use Lotus.Props.Text
   use Lotus.Props.Utility
   use Lotus.Props.FallbackClass
@@ -17,9 +17,14 @@ defmodule Lotus.CommentAvatar do
   """
   prop alt, :string
 
+  @doc """
+  Other opts
+  """
+  prop opts, :keyword, default: []
+
   def render(assigns) do
     ~F"""
-    <img class={comment_avatar_class(assigns)} src={@src} alt={@alt} />
+    <img class={comment_avatar_class(assigns)} src={@src} alt={@alt} {...@opts} />
     """
   end
 

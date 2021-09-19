@@ -2,7 +2,7 @@ defmodule Lotus.CommentTitle do
   @moduledoc """
   Title of a comment
   """
-  use Surface.Component, slot: "comment_title"
+  use Surface.Component
   use Lotus.Props.Text
   use Lotus.Props.Utility
   use Lotus.Props.FallbackClass
