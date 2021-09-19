@@ -40,4 +40,26 @@ defmodule Lotus.Gen.Helpers do
     if config[:playground], do: File.touch(config[:playground])
     if config[:hook], do: File.touch(config[:hook])
   end
+
+  @templates "lib/lotus/gen/templates"
+
+  def write_main(config) do
+    EEx.eval_file("#{@templates}/main.eex", Map.to_list(config))
+  end
+
+  def write_test(config) do
+    EEx.eval_file("#{@templates}/test.eex", Map.to_list(config))
+  end
+
+  def write_playground(config) do
+    EEx.eval_file("#{@templates}/playground.eex", Map.to_list(config))
+  end
+
+  def write_hook(config) do
+    EEx.eval_file("#{@templates}/hook.eex", Map.to_list(config))
+  end
+
+  def write_example(config) do
+    EEx.eval_file("#{@templates}/example.eex", Map.to_list(config))
+  end
 end

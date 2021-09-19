@@ -9,21 +9,7 @@ defmodule Lotus.Gen do
     props: ["size"],
     hook: false,
     playground: false,
-    examples: 1,
-    cases: [
-      {
-        """
-        <Container size="small">
-          Hello
-        </Container>
-        """,
-        """
-        <div class="uk-container uk-container-small">
-          Hello
-        </div>
-        """
-      }
-    ]
+    examples: 1
   }
   def get_config, do: @current_module
 

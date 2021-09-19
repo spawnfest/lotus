@@ -1,0 +1,31 @@
+defmodule Lotus.<%= module %> do
+  @moduledoc """
+  <docs> https://getuikit.com/docs/<%= file %>
+  """
+  use Lotus.Component
+
+  <%= for prop <- props do %>
+  @doc """
+  Doc of <%= prop %>
+  """
+  prop <%= prop %>, :string, values: ~w//
+  <% end %>
+
+  slot default
+
+  def render(assigns) do
+    ~F"""
+    <div <%= if hook do  %>:hook=<%= module %><% end %> class={<%= file %>_class(assigns)} {...@opts}>
+      <#slot />
+    </div>
+    """
+  end
+
+  defp <%= file %>_class(assigns) do
+    Surface.css_class(
+      "<%= class %>": true,
+      <%= for prop <- props do %>"uk-<%= class %>-#{assigns.<%= prop %>}": assigns.<%= prop %>,<% end %>
+    )
+    |> List.wrap()
+  end
+end
