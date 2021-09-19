@@ -5,15 +5,15 @@ defmodule Lotus.Gen do
   alias Lotus.Gen.Helpers
 
   # ------------------------------------------------------- MODULES
-  @identifier "description_list"
+  @identifier "flex"
   @current_module %{
     file: @identifier,
     module: Phoenix.Naming.camelize(@identifier),
     class: ~s/uk-#{@identifier |> String.replace("_", "-")}/,
-    props: ["divider"],
-    responsive_props: [],
+    props: ["inline", "horizontal", "vertical", "direction", "wrap", "item_order", "dimensions", ],
+    responsive_props: ["item_order", "horizontal_alignment"],
     hook: false,
-    playground: false,
+    playground: true,
     examples: 1
   }
   def get_module, do: @current_module
