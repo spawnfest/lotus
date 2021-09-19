@@ -10,9 +10,9 @@ defmodule Lotus.BreadcrumbTest do
       render_surface do
         ~F"""
         <Breadcrumb>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-          <li><span></span></li>
+          <li><a href="" /></li>
+          <li><a href="" /></li>
+          <li><span /></li>
         </Breadcrumb>
         """
       end
