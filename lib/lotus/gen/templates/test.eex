@@ -1,4 +1,4 @@
-defmodule Lotus.<%= module %>>Test do
+defmodule Lotus.<%= module %>Test do
   use Lotus.Support.ConnCase, async: true
 
   @moduletag :component_<%= file %>

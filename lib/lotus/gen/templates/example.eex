@@ -1,4 +1,4 @@
-defmodule Lotus.Catalogue.<%= module %>>.Example01 do
+defmodule Lotus.Catalogue.<%= module %>.Example01 do
   use Surface.Catalogue.Example,
     subject: Lotus.<%= module %>,
     catalogue: Lotus.Catalogue,
