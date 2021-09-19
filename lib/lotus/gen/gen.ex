@@ -5,15 +5,15 @@ defmodule Lotus.Gen do
   alias Lotus.Gen.Helpers
 
   # ------------------------------------------------------- MODULES
-  @identifier "spinner"
+  @identifier "tab"
   @current_module %{
     file: @identifier,
     module: Phoenix.Naming.camelize(@identifier),
     class: ~s/uk-#{@identifier |> String.replace("_", "-")}/,
-    props: ["ratio"],
+    props: ["position"],
     responsive_props: [],
     hook: true,
-    playground: true,
+    playground: false,
     examples: 1
   }
   def get_module, do: @current_module
