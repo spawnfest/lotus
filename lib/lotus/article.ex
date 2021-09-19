@@ -4,7 +4,7 @@ defmodule Lotus.Article do
 
   Documentation: https://getuikit.com/docs/article
   """
-  use Lotus.Component
+  use Lotus.ContainerComponent
 
   slot article_title
   slot article_meta
@@ -23,7 +23,7 @@ defmodule Lotus.Article do
 
   defp article_class(assigns) do
     [
-      Surface.css_class("uk-article": true) | base_classes(assigns)
+      Surface.css_class("uk-article": true) | container_base_classes(assigns)
     ]
   end
 end
