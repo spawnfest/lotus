@@ -1,6 +1,7 @@
 defmodule Lotus.Gen do
   alias Lotus.Gen.Helpers
 
+  # ------------------------------------------------------- MODULES
   @identifier "container"
   @current_module %{
     file: @identifier,
@@ -12,9 +13,9 @@ defmodule Lotus.Gen do
     playground: false,
     examples: 1
   }
-  def get_config, do: @current_module
+  def get_module, do: @current_module
 
-  def generate_modules do
+  def generate_module do
     @current_module
     |> Helpers.list_artifacts()
     |> tap(&Helpers.generate_artifacts/1)
@@ -28,5 +29,20 @@ defmodule Lotus.Gen do
     end)
     |> Enum.reject(&is_nil/1)
     |> Enum.map(fn v -> tap(v, &Helpers.write_to_file/1) end)
+  end
+
+  # ------------------------------------------------------- PROPS
+  @identifier "align"
+  @current_prop %{
+    file: @identifier,
+    module: Phoenix.Naming.camelize(@identifier),
+    class: ~s/uk-#{@identifier |> String.replace("_", "-")}/,
+    props: ["size"],
+    responsive_props: []
+  }
+  def get_prop, do: @current_module
+
+  def generate_prop do
+    Helpers.create_prop(@current_prop)
   end
 end

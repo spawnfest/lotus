@@ -27,12 +27,14 @@ defmodule Lotus.Gen.Helpers do
     {:examples, example_files}
   end
 
-  def generate_artifacts(%{
-    directory: directory,
-    main: main,
-    test: test,
-    examples: examples
-  } = config) do
+  def generate_artifacts(
+        %{
+          directory: directory,
+          main: main,
+          test: test,
+          examples: examples
+        } = config
+      ) do
     File.mkdir(directory)
     File.touch(main)
     File.touch(test)
@@ -63,11 +65,21 @@ defmodule Lotus.Gen.Helpers do
     EEx.eval_file("#{@templates}/example.eex", Map.to_list(config))
   end
 
+  def write_prop(config) do
+    EEx.eval_file("#{@templates}/prop.eex", Map.to_list(config))
+  end
+
   def write_to_file({path, value}) when is_list(path) do
     Enum.each(path, &File.write!(&1, value))
   end
 
   def write_to_file({path, value}) do
     File.write!(path, value)
+  end
+
+  def create_prop(%{file: file} = prop_config) do
+    path = "lib/lotus/props/#{file}.ex"
+    File.touch(path)
+    write_to_file({path, write_prop(prop_config)})
   end
 end
