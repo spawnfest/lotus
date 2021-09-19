@@ -1,10 +1,10 @@
 defmodule Lotus.Spinner do
   @moduledoc """
-  # TODO
+  Create an animated loading spinner.
 
   Documentation: https://getuikit.com/docs/spinner
   """
-  use Lotus.Component
+  use Lotus.SimpleComponent
 
   @doc """
   ratio
@@ -17,7 +17,7 @@ defmodule Lotus.Spinner do
 
   def render(assigns) do
     ~F"""
-    <div :hook="Spinner" {=@id} class={base_classes(assigns)} data-ratio={@ratio} {...@opts}>
+    <div :hook="Spinner" {=@id} class={simple_base_classes(assigns)} data-ratio={@ratio} {...@opts}>
       <#slot />
     </div>
     """
