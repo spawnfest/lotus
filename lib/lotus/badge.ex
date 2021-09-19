@@ -17,19 +17,17 @@ defmodule Lotus.Badge do
   slot default, required: true
 
   def render(assigns) do
-    class = badge_class(assigns)
-
     case assigns.el do
       "span" ->
         ~F"""
-        <span {=@class} {...@opts}>
+        <span class={badge_class(assigns)} {...@opts}>
           <#slot />
         </span>
         """
 
       "a" ->
         ~F"""
-        <a {=@class} {...@opts}>
+        <a class={badge_class(assigns)} {...@opts}>
           <#slot />
         </a>
         """
