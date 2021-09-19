@@ -5,12 +5,12 @@ defmodule Lotus.Gen do
   alias Lotus.Gen.Helpers
 
   # ------------------------------------------------------- MODULES
-  @identifier "breadcrumb"
+  @identifier "description_list"
   @current_module %{
     file: @identifier,
     module: Phoenix.Naming.camelize(@identifier),
     class: ~s/uk-#{@identifier |> String.replace("_", "-")}/,
-    props: [],
+    props: ["divider"],
     responsive_props: [],
     hook: false,
     playground: false,
