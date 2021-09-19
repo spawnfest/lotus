@@ -8,9 +8,9 @@ defmodule Lotus.Gen do
     module: Phoenix.Naming.camelize(@identifier),
     class: ~s/uk-#{@identifier |> String.replace("_", "-")}/,
     props: ["size"],
-    responsive_props: ["size"],
+    responsive_props: [],
     hook: false,
-    playground: false,
+    playground: true,
     examples: 1
   }
   def get_module, do: @current_module

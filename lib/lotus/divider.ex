@@ -2,7 +2,7 @@ defmodule Lotus.Divider do
   @moduledoc """
   Create dividers to separate content and apply different styles to them. Documentation: https://getuikit.com/docs/divider
   """
-  use Lotus.Component
+  use Lotus.SimpleComponent
 
   @divider_types ~w/small icon vertical/
 
@@ -18,6 +18,6 @@ defmodule Lotus.Divider do
   end
 
   defp divider_class(assigns) do
-    ["uk-divider-#{assigns.type}"] ++ base_classes(assigns)
+    ["uk-divider-#{assigns.type}"] ++ simple_base_classes(assigns)
   end
 end

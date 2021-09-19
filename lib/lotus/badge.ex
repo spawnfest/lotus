@@ -2,7 +2,7 @@ defmodule Lotus.Badge do
   @moduledoc """
   Creates nice looking notification badges. Documentation: https://getuikit.com/docs/badge
   """
-  use Lotus.Component
+  use Lotus.SimpleComponent
 
   @inlines ~w/span a/
 
@@ -36,6 +36,6 @@ defmodule Lotus.Badge do
   end
 
   defp badge_class(assigns) do
-    ["uk-badge"] ++ base_classes(assigns)
+    ["uk-badge"] ++ simple_base_classes(assigns)
   end
 end
