@@ -5,13 +5,13 @@ defmodule Lotus.Gen do
   alias Lotus.Gen.Helpers
 
   # ------------------------------------------------------- MODULES
-  @identifier "flex"
+  @identifier "block"
   @current_module %{
     file: @identifier,
     module: Phoenix.Naming.camelize(@identifier),
     class: ~s/uk-#{@identifier |> String.replace("_", "-")}/,
-    props: ["inline", "horizontal", "vertical", "direction", "wrap", "item_order", "dimensions", ],
-    responsive_props: ["item_order", "horizontal_alignment"],
+    props: ["inline"],
+    responsive_props: [],
     hook: false,
     playground: true,
     examples: 1
@@ -35,19 +35,13 @@ defmodule Lotus.Gen do
   end
 
   # ------------------------------------------------------- PROPS
-  @identifier "background"
+  @identifier "flex"
   @current_prop %{
     file: @identifier,
     module: Phoenix.Naming.camelize(@identifier),
     class: ~s/uk-#{@identifier |> String.replace("_", "-")}/,
-    props: [
-      "background_size",
-      "background_position",
-      "background_no_repeat",
-      "background_fixed",
-      "background_blend"
-    ],
-    responsive_props: ["background_image"]
+    props: ["inline", "horizontal", "vertical", "direction", "wrap", "item_order", "dimensions",],
+    responsive_props: ["item_order", "horizontal_alignment"]
   }
   def get_prop, do: @current_module
 
