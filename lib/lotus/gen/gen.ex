@@ -5,7 +5,7 @@ defmodule Lotus.Gen do
   alias Lotus.Gen.Helpers
 
   # ------------------------------------------------------- MODULES
-  @identifier "subnav"
+  @identifier "thumbnav"
   @current_module %{
     file: @identifier,
     module: Phoenix.Naming.camelize(@identifier),
