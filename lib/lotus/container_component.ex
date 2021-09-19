@@ -6,9 +6,10 @@ defmodule Lotus.ContainerComponent do
     quote do
       use Lotus.Component
       use Lotus.Props.Background
+      use Lotus.Props.Flex
 
       defp container_base_classes(assigns) do
-        base_classes(assigns) ++ background_class(assigns)
+        base_classes(assigns) ++ background_class(assigns) ++ flex_class(assigns)
       end
     end
   end

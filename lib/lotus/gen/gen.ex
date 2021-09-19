@@ -40,7 +40,7 @@ defmodule Lotus.Gen do
     file: @identifier,
     module: Phoenix.Naming.camelize(@identifier),
     class: ~s/uk-#{@identifier |> String.replace("_", "-")}/,
-    props: ["inline", "horizontal", "vertical", "direction", "wrap", "item_order", "dimensions",],
+    props: ["inline", "horizontal", "vertical", "direction", "wrap", "wrap_item", "item_order", "dimensions",],
     responsive_props: ["item_order", "horizontal_alignment"]
   }
   def get_prop, do: @current_module
