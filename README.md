@@ -108,4 +108,4 @@ There are components that are not ported yet, a portion of those will be ported 
 - Surface Bulma - https://github.com/surface-ui/surface_catalogue I got a lot of inspiration from this one! I've been wanting to make something like this since I knew of it!
 - Surface Bootstrap - https://github.com/surface-ui/surface_bootstrap thanks to this project, I learned how to run Catalogue server, and also gained confidence in structuring components.
 
-I would like to thank everyone in the Beam community for giving me this learning opportunity!
+I would like to thank everyone in the UIKit and Beam community for giving me this learning opportunity! 
