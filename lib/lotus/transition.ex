@@ -6,11 +6,15 @@ defmodule Lotus.Transition do
   """
   use Lotus.Component
 
+  @doc """
+  Tabindex
+  """
+  prop tabindex, :string
   slot default
 
   def render(assigns) do
     ~F"""
-    <div class={transition_toggle_class(assigns)} {...@opts}>
+    <div class={transition_toggle_class(assigns)} {=@tabindex} {...@opts}>
       <#slot />
     </div>
     """
