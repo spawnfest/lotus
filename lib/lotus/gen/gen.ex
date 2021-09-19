@@ -5,15 +5,15 @@ defmodule Lotus.Gen do
   alias Lotus.Gen.Helpers
 
   # ------------------------------------------------------- MODULES
-  @identifier "page"
+  @identifier "subnav"
   @current_module %{
     file: @identifier,
     module: Phoenix.Naming.camelize(@identifier),
     class: ~s/uk-#{@identifier |> String.replace("_", "-")}/,
-    props: ["page_active", "page_disabled"],
+    props: [],
     responsive_props: [],
     hook: false,
-    playground: true,
+    playground: false,
     examples: 1
   }
   def get_module, do: @current_module

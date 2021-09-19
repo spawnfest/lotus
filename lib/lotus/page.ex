@@ -10,6 +10,7 @@ defmodule Lotus.Page do
   page_active
   """
   prop page_active, :boolean
+
   @doc """
   page_disabled
   """
