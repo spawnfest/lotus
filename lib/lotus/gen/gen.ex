@@ -5,7 +5,7 @@ defmodule Lotus.Gen do
   alias Lotus.Gen.Helpers
 
   # ------------------------------------------------------- MODULES
-  @identifier "card_body"
+  @identifier "transition"
   @current_module %{
     file: @identifier,
     module: Phoenix.Naming.camelize(@identifier),
@@ -35,12 +35,12 @@ defmodule Lotus.Gen do
   end
 
   # ------------------------------------------------------- PROPS
-  @identifier "dark_mode"
+  @identifier "transition"
   @current_prop %{
     file: @identifier,
     module: Phoenix.Naming.camelize(@identifier),
     class: ~s/uk-#{@identifier |> String.replace("_", "-")}/,
-    props: ["dark_mode"],
+    props: ["transition"],
     responsive_props: []
   }
   def get_prop, do: @current_module
