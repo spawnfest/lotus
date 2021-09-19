@@ -3,6 +3,7 @@ defmodule Lotus.Button do
   A Button element as defined by https://getuikit.com/docs/button
   """
   use Lotus.Component
+  use Lotus.Props.Events
 
   @kinds ~w/default primary secondary danger text link/
   @sizes ~w/small large/
@@ -42,16 +43,13 @@ defmodule Lotus.Button do
   """
   prop extra_large, :string
 
-  @doc """
-  Default click action
-  """
-  prop click, :event
-
   slot default
 
   def render(assigns) do
+    events = event_attrs(assigns)
+
     ~F"""
-    <button :on-click={@click} type="button" class={button_class(assigns)} {...@opts}>
+    <button type="button" class={button_class(assigns)} :attrs={@opts ++ events}>
       <#slot>{@label}</#slot>
     </button>
     """

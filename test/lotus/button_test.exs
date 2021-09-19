@@ -144,7 +144,7 @@ defmodule Lotus.ButtonTest do
       end
 
     assert html =~ """
-           <button phx-click="click" disabled value="HI" type="button" class="uk-button uk-width-1-1">
+           <button disabled phx-click="click" value="HI" type="button" class="uk-button uk-width-1-1">
              Block Button
            </button>
            """
