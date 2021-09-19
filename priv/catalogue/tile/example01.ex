@@ -3,7 +3,7 @@ defmodule Lotus.Catalogue.Tile.Example01 do
     subject: Lotus.Tile,
     catalogue: Lotus.Catalogue,
     title: "Tile",
-    height: "600px",
+    height: "400px",
     direction: "vertical",
     container: {:div, class: "uk-container"}
 
@@ -28,24 +28,6 @@ defmodule Lotus.Catalogue.Tile.Example01 do
       <div>
           <Tile color="secondary">
               <p class="uk-h4">Secondary</p>
-          </Tile>
-      </div>
-    </div>
-    <hr />
-    <div class="uk-grid uk-child-width-1-3@s uk-grid-small uk-text-center" uk-grid>
-      <div>
-          <Tile color="muted" class="uk-padding-remove">
-              <p class="uk-h4">Remove</p>
-          </Tile>
-      </div>
-      <div>
-          <Tile color="primary" padding="small">
-              <p class="uk-h4">Small</p>
-          </Tile>
-      </div>
-      <div>
-          <Tile color="secondary" padding="large">
-              <p class="uk-h4">Large</p>
           </Tile>
       </div>
     </div>
