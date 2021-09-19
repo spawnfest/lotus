@@ -2,7 +2,7 @@ defmodule Lotus.Catalogue.DescriptionList.Example01 do
   use Surface.Catalogue.Example,
     subject: Lotus.DescriptionList,
     catalogue: Lotus.Catalogue,
-    title: "DescriptionList",
+    title: "Description List",
     height: "400px",
     direction: "horizontal",
     container: {:div, class: "uk-container"}
