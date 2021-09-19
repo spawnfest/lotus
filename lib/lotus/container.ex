@@ -15,7 +15,7 @@ defmodule Lotus.Container do
 
   def render(assigns) do
     ~F"""
-    <div  class={container_class(assigns)} {...@opts}>
+    <div class={container_class(assigns)} {...@opts}>
       <#slot />
     </div>
     """
@@ -26,7 +26,8 @@ defmodule Lotus.Container do
       Surface.css_class(
         "uk-container": true,
         "uk-container-#{assigns.size}": assigns.size
-      ) | base_classes(assigns)
+      )
+      | base_classes(assigns)
     ]
   end
 end

@@ -10,7 +10,7 @@ defmodule Lotus.Component do
       use Lotus.Props.Width
 
       defp base_classes(assigns) do
-          width_class(assigns) ++
+        width_class(assigns) ++
           text_class(assigns) ++ utility_class(assigns) ++ simple_base_classes(assigns)
       end
     end

@@ -14,8 +14,8 @@ defmodule Lotus.DividerTest do
       end
 
     assert html =~ """
-            <hr class="uk-divider-small">
-            """
+           <hr class="uk-divider-small">
+           """
   end
 
   test "Creates a vertical divider" do
@@ -27,8 +27,8 @@ defmodule Lotus.DividerTest do
       end
 
     assert html =~ """
-            <hr class="uk-divider-vertical">
-            """
+           <hr class="uk-divider-vertical">
+           """
   end
 
   test "Creates an icon divider" do
@@ -40,8 +40,8 @@ defmodule Lotus.DividerTest do
       end
 
     assert html =~ """
-            <hr class="uk-divider-icon">
-            """
+           <hr class="uk-divider-icon">
+           """
   end
 
   test "Creates a divider with classes" do
@@ -53,7 +53,7 @@ defmodule Lotus.DividerTest do
       end
 
     assert html =~ """
-            <hr class="uk-divider-icon uk-divider-small">
-            """
+           <hr class="uk-divider-icon uk-divider-small">
+           """
   end
 end

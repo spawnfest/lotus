@@ -22,13 +22,14 @@ defmodule Lotus.Badge do
     case assigns.el do
       "span" ->
         ~F"""
-        <span {=class} {...@opts}>
+        <span {=@class} {...@opts}>
           <#slot />
         </span>
         """
+
       "a" ->
         ~F"""
-        <a {=class} {...@opts}>
+        <a {=@class} {...@opts}>
           <#slot />
         </a>
         """

@@ -13,7 +13,7 @@ defmodule Lotus.Divider do
 
   def render(assigns) do
     ~F"""
-    <hr class={divider_class(assigns)} />
+    <hr class={divider_class(assigns)}>
     """
   end
 

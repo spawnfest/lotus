@@ -18,13 +18,11 @@ defmodule Lotus.Progress do
 
   def render(assigns) do
     ~F"""
-    <progress class={progress_class(assigns)} value={@value} max={@max} {...@opts}></progress>
+    <progress class={progress_class(assigns)} value={@value} max={@max} {...@opts} />
     """
   end
 
   defp progress_class(assigns) do
-    [Surface.css_class(
-      "uk-progress": true
-    ) | simple_base_classes(assigns)]
+    [Surface.css_class("uk-progress": true) | simple_base_classes(assigns)]
   end
 end
