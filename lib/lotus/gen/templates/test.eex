@@ -9,7 +9,7 @@ defmodule Lotus.<%= module %>Test do
     html =
       render_surface do
         ~F"""
-        <<%= module %>>Hello</<%= module %>>>
+        <<%= module %>>Hello</<%= module %>>
         """
       end
 
