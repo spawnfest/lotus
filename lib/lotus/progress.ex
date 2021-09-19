@@ -4,7 +4,7 @@ defmodule Lotus.Progress do
 
   Documentation: https://getuikit.com/docs/progress
   """
-  use Lotus.SimpleComponent
+  use Surface.Component
 
   @doc """
   Value of the progress bar
@@ -14,15 +14,15 @@ defmodule Lotus.Progress do
   @doc """
   Maximum value
   """
-  prop max, :integer
+  prop max, :integer, default: 100
 
   def render(assigns) do
     ~F"""
-    <progress class={progress_class(assigns)} value={@value} max={@max} {...@opts} />
+    <progress class={progress_class(assigns)} value={@value} max={@max} />
     """
   end
 
-  defp progress_class(assigns) do
-    [Surface.css_class("uk-progress": true) | simple_base_classes(assigns)]
+  defp progress_class(_assigns) do
+    [Surface.css_class("uk-progress": true)]
   end
 end
