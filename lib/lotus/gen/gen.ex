@@ -5,7 +5,7 @@ defmodule Lotus.Gen do
   alias Lotus.Gen.Helpers
 
   # ------------------------------------------------------- MODULES
-  @identifier "dotnav"
+  @identifier "image"
   @current_module %{
     file: @identifier,
     module: Phoenix.Naming.camelize(@identifier),
@@ -35,12 +35,12 @@ defmodule Lotus.Gen do
   end
 
   # ------------------------------------------------------- PROPS
-  @identifier "grid"
+  @identifier "dark_mode"
   @current_prop %{
     file: @identifier,
     module: Phoenix.Naming.camelize(@identifier),
     class: ~s/uk-#{@identifier |> String.replace("_", "-")}/,
-    props: ["grid", "grid_size", "grid_column_size", "grid_row_size", "divider", "grid_match_height", ],
+    props: ["dark_mode"],
     responsive_props: []
   }
   def get_prop, do: @current_module
