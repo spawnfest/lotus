@@ -5,7 +5,7 @@ defmodule Lotus.Gen do
   alias Lotus.Gen.Helpers
 
   # ------------------------------------------------------- MODULES
-  @identifier "article_meta"
+  @identifier "comment_avatar"
   @current_module %{
     file: @identifier,
     module: Phoenix.Naming.camelize(@identifier),
@@ -14,7 +14,7 @@ defmodule Lotus.Gen do
     responsive_props: [],
     hook: false,
     playground: false,
-    examples: 0
+    examples: 1
   }
   def get_module, do: @current_module
 
