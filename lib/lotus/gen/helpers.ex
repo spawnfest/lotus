@@ -62,4 +62,12 @@ defmodule Lotus.Gen.Helpers do
   def write_example(config) do
     EEx.eval_file("#{@templates}/example.eex", Map.to_list(config))
   end
+
+  def write_to_file({path, value}) when is_list(path) do
+    Enum.each(path, &File.write!(&1, value))
+  end
+
+  def write_to_file({path, value}) do
+    File.write!(path, value)
+  end
 end
