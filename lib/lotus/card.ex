@@ -1,6 +1,6 @@
 defmodule Lotus.Card do
   @moduledoc """
-  # TODO
+  Create layout boxes with different styles.
 
   Documentation: https://getuikit.com/docs/card
   """

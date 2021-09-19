@@ -1,8 +1,8 @@
 defmodule Lotus.CardHeader do
   @moduledoc """
-  # TODO 
+  Card header
 
-  Documentation: https://getuikit.com/docs/card_header
+  Documentation: https://getuikit.com/docs/card
   """
   use Lotus.Component
 

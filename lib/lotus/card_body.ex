@@ -1,8 +1,8 @@
 defmodule Lotus.CardBody do
   @moduledoc """
-  # TODO 
+  Body of a card.
 
-  Documentation: https://getuikit.com/docs/card_body
+  Documentation: https://getuikit.com/docs/card
   """
   use Lotus.Component
 

@@ -1,8 +1,8 @@
 defmodule Lotus.CardTitle do
   @moduledoc """
-  # TODO
+  Title of a card.
 
-  Documentation: https://getuikit.com/docs/card_title
+  Documentation: https://getuikit.com/docs/card
   """
   use Lotus.Component
 

@@ -1,8 +1,8 @@
 defmodule Lotus.CardFooter do
   @moduledoc """
-  # TODO 
+  Footer of a card.
 
-  Documentation: https://getuikit.com/docs/card_footer
+  Documentation: https://getuikit.com/docs/card
   """
   use Lotus.Component
 
