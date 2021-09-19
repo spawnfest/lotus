@@ -10,7 +10,7 @@ I initially wanted to make a static site generator for SpawnFest, but I realized
 
 ## How to run?
 
-To checkout the catalogue, enter `mix dev.exs` and then go to `http://localhost:4001` and checkout the catalogue.
+To checkout the catalogue, enter `mix dev` and then go to `http://localhost:4001` and checkout the catalogue. All my components are under the `Lotus` section.
 
 This has been tested with Phoenix 1.5.x and Elixir 1.12.x with OTP 24.
 
