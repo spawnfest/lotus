@@ -5,17 +5,17 @@ defmodule Lotus.Props.Background do
   defmacro __using__(_) do
     quote do
       @doc """
-      Doc of background_size
+      Background_size
       """
       prop background, :string, default: "default", values: ~w/default muted primary secondary/
 
       @doc """
-      Doc of background_size
+      Background_size
       """
       prop background_size, :string, values: ~w/cover contain width-1-1 height-1-1/
 
       @doc """
-      Doc of background_position
+      Background_position
       """
       prop background_position, :string, values: ~w/
         top-left
@@ -30,17 +30,17 @@ defmodule Lotus.Props.Background do
       /
 
       @doc """
-      Doc of background_no_repeat
+      Background_no_repeat
       """
       prop background_no_repeat, :boolean
 
       @doc """
-      Doc of background_fixed
+      Background_fixed
       """
       prop background_fixed, :boolean
 
       @doc """
-      Doc of background_blend
+      Background_blend
       """
       prop background_blend, :string, values: ~w/
         multiply
@@ -61,22 +61,22 @@ defmodule Lotus.Props.Background do
       /
 
       @doc """
-      Doc of background_image (Small)
+      Background_image (Small)
       """
       prop background_image_small, :string
 
       @doc """
-      Doc of background_image (Medium)
+      Background_image (Medium)
       """
       prop background_image_medium, :string
 
       @doc """
-      Doc of background_image (Large)
+      Background_image (Large)
       """
       prop background_image_large, :string
 
       @doc """
-      Doc of background_image (Extra large)
+      Background_image (Extra large)
       """
       prop background_image_xlarge, :string
 

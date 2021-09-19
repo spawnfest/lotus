@@ -6,27 +6,27 @@ defmodule Lotus.Props.Align do
     quote do
       @align_direction ~w/left right center/
       @doc """
-      Doc of align direction
+      Align direction
       """
       prop align_direction, :string, values: @align_direction
 
       @doc """
-      Doc of align direction (Small)
+      Align direction (Small)
       """
       prop align_direction_small, :string, values: @align_direction
 
       @doc """
-      Doc of align direction (Medium)
+      Align direction (Medium)
       """
       prop align_direction_medium, :string, values: @align_direction
 
       @doc """
-      Doc of align direction (Large)
+      Align direction (Large)
       """
       prop align_direction_large, :string, values: @align_direction
 
       @doc """
-      Doc of align direction (Extra large)
+      Align direction (Extra large)
       """
       prop align_direction_xlarge, :string, values: @align_direction
 
