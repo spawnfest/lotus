@@ -1,4 +1,8 @@
 defmodule Lotus.Gen.Helpers do
+  @moduledoc """
+  Helper functions to create and render files
+  """
+
   @type artifact() :: %{}
   @doc """
   List artifacts (directory and files) that need to be generated. For the purpose of wrapping a new component.

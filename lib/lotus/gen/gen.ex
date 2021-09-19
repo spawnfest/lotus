@@ -1,4 +1,7 @@
 defmodule Lotus.Gen do
+  @moduledoc """
+  Generator functions to create components and props
+  """
   alias Lotus.Gen.Helpers
 
   # ------------------------------------------------------- MODULES
