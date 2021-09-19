@@ -1,0 +1,12 @@
+import UIkit from "uikit"
+
+const <%= module %> = {
+    mounted() {
+        UIkit.<%= module %>(this.el);
+    },
+    updated() {
+        UIkit.<%= module %>(this.el, {});
+    }
+}
+
+export { <%= module %> }

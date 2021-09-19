@@ -1,0 +1,22 @@
+defmodule Lotus.<%= module %>Test do
+  use Lotus.Support.ConnCase, async: true
+
+  @moduletag :component_<%= file %>
+
+  alias Lotus.<%= module %>
+
+  test "Creates a <%= module %>" do
+    html =
+      render_surface do
+        ~F"""
+        <<%= module %>>Hello</<%= module %>>>
+        """
+      end
+
+    assert html =~ """
+           <div class="uk-<%= file %>">
+             Hello
+           </div>
+           """
+  end
+end

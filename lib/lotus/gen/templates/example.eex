@@ -1,0 +1,15 @@
+defmodule Lotus.Catalogue.<%= module %>.Example01 do
+  use Surface.Catalogue.Example,
+    subject: Lotus.<%= module %>,
+    catalogue: Lotus.Catalogue,
+    title: "<%= module %>",
+    height: "90px",
+    direction: "vertical",
+    container: {:div, class: "uk-container"}
+
+  def render(assigns) do
+    ~F"""
+    <<%= module %>>Default</<%= module %>>
+    """
+  end
+end

@@ -1,0 +1,46 @@
+defmodule Lotus.Props.<%= module %> do
+  @moduledoc """
+  <docs> https://getuikit.com/docs/<%= file %>
+  """
+  defmacro __using__(_) do
+    quote do
+      <%= for prop <- props do %>@doc """
+      Doc of <%= prop %>
+      """
+      prop <%= prop %>, :string, values: ~w//<% end %>
+      <%= for prop <- responsive_props do %>
+      @doc """
+      Doc of <%= prop %> (Small)
+      """
+      prop <%= prop %>_small, :string, values: ~w//
+
+      @doc """
+      Doc of <%= prop %> (Medium)
+      """
+      prop <%= prop %>_medium, :string, values: ~w//
+
+      @doc """
+      Doc of <%= prop %> (Large)
+      """
+      prop <%= prop %>_large, :string, values: ~w//
+
+      @doc """
+      Doc of <%= prop %> (Extra large)
+      """
+      prop <%= prop %>_xlarge, :string, values: ~w//    
+      <% end %>
+
+      defp <%= file %>_class(assigns) do
+        Surface.css_class(
+          "<%= class %>": true,
+          <%= for prop <- props do %>"<%= class %>-#{assigns.<%= prop %>}": assigns.<%= prop %>,<% end %>
+          <%= for prop <- responsive_props do %>"<%= class %>-#{assigns.<%= prop %>_small}@s": assigns.<%= prop %>_small,
+          "<%= class %>-#{assigns.<%= prop %>_medium}@m": assigns.<%= prop %>_medium,
+          "<%= class %>-#{assigns.<%= prop %>_large}@l": assigns.<%= prop %>_large,
+          "<%= class %>-#{assigns.<%= prop %>_xlarge}@xl": assigns.<%= prop %>_xlarge<% end %>
+        )
+        |> List.wrap()
+      end
+    end
+  end
+end
