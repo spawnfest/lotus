@@ -7,6 +7,7 @@ defmodule Lotus.SimpleComponent do
       use Surface.Component
       use Lotus.Props.FallbackClass
       use Lotus.Props.Padding
+      use Lotus.Props.Margin
 
       @doc """
       Additional attributes to add onto the generated element
